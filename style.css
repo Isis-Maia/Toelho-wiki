@@ -44,3 +44,55 @@ body {
     margin: 5px 0;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
+.carrossel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.personagem {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.personagem img {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.personagem img:hover {
+    transform: scale(1.05);
+    border-color: #0077cc;
+}
+
+.personagem a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+}
+
+.personagem a:hover {
+    color: #0077cc;
+}
+
+  /* Scrollbar bonitinha (opcional) */
+.carrossel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrossel-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
